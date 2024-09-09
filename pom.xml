@@ -11,4 +11,11 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>gui.Home</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.20</version> <!-- Usa la versión más reciente si es posible -->
+        </dependency>
+    </dependencies>
 </project>

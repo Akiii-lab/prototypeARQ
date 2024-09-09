@@ -25,7 +25,7 @@ public class RoomCard extends javax.swing.JPanel {
 
     public RoomCard(String title, String description, String action, String image) {
         setLayout(new BorderLayout());
-        setPreferredSize(new java.awt.Dimension(830, 220));
+        setPreferredSize(new java.awt.Dimension(830, 180));
         setBorder(BorderFactory.createLineBorder(java.awt.Color.gray, 1));
 
         descriptionLabel = new JLabel("<html><body><h1>" + title + "</h1><br><p style='width: 700px'>" + description + "</p></body></html>");
@@ -35,7 +35,7 @@ public class RoomCard extends javax.swing.JPanel {
         imageLabel = new JLabel();
         try {
             ImageIcon imageIcon = new ImageIcon(new URL(image));
-            imageIcon.setImage(imageIcon.getImage().getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH));
+            imageIcon.setImage(imageIcon.getImage().getScaledInstance(170, 170, java.awt.Image.SCALE_SMOOTH));
             imageLabel.setIcon(imageIcon);
         } catch (Exception e) {
             System.out.println("Error loading image: " + e.getMessage());
