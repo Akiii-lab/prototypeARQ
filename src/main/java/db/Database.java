@@ -17,6 +17,10 @@ public class Database {
     private static Connection con = null;
 
     public Database(String user, String password, String database, String host, String port) {
+
+        if (con != null) {
+            return;
+        }
         try {
             System.out.println(
                     "Connecting to database " + database + " ...");
