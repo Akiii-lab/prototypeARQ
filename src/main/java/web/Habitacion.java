@@ -15,12 +15,11 @@ public class Habitacion {
     private int id;
     private String titulo;
     private String descripcion;
-    private ListCountry pais;
-    private ListCitys ciudad;
-    private ArrayList<ServiceList> lista;
+    private String pais;
+    private String ciudad;
+    private ArrayList<String> lista;
 
-    public Habitacion(int id, String titulo, String descripcion, ListCountry pais, ListCitys ciudad, ArrayList<ServiceList> lista) {
-        this.id = id;
+    public Habitacion(String titulo, String descripcion, String pais, String ciudad, ArrayList<String> lista) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.pais = pais;
@@ -33,7 +32,7 @@ public class Habitacion {
     
     @Override
     public String toString() {
-        return "Habitacion{" + "id=" + id + ", titulo=" + titulo + ", descripcion=" + descripcion + ", pais=" + pais + ", ciudad=" + ciudad + ", lista=" + lista + '}';
+        return "Habitacion{" + "id=" + id + ", titulo=" + titulo + ", descripcion=" + descripcion + ", pais=" + getPais() + ", ciudad=" + getCiudad() + ", lista=" + getLista() + '}';
     }
     
     /**
@@ -81,43 +80,44 @@ public class Habitacion {
     /**
      * @return the pais
      */
-    public ListCountry getPais() {
+    public String getPais() {
         return pais;
     }
 
     /**
      * @param pais the pais to set
      */
-    public void setPais(ListCountry pais) {
+    public void setPais(String pais) {
         this.pais = pais;
     }
 
     /**
      * @return the ciudad
      */
-    public ListCitys getCiudad() {
+    public String getCiudad() {
         return ciudad;
     }
 
     /**
      * @param ciudad the ciudad to set
      */
-    public void setCiudad(ListCitys ciudad) {
+    public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
 
     /**
      * @return the lista
      */
-    public ArrayList<ServiceList> getLista() {
+    public ArrayList<String> getLista() {
         return lista;
     }
 
     /**
      * @param lista the lista to set
      */
-    public void setLista(ArrayList<ServiceList> lista) {
+    public void setLista(ArrayList<String> lista) {
         this.lista = lista;
     }
+
     
 }
